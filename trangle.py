@@ -1,7 +1,9 @@
 from turtle import *
+import random
 
-color("#080808")
+nums = ('1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f')
 
+color("#AFD7AF")
 
 
 #canvas
@@ -20,16 +22,7 @@ end_fill()
 penup()
 color("#0F0F0F")
 
-begin_fill()
-goto(65, 85)
-pendown()
-left(85)
-forward(87)
-left(60)
-forward(85)
-goto(65, 85)
-end_fill()
-
+goto(105, 65)
 
 
 for i in range(1, 8):
@@ -39,7 +32,9 @@ for i in range(1, 8):
     seth(i*20)
     posi = pos()
 
-    colstr = '#' + (str(hex(i*2))[2:] + 'a')*3
+    colstr = '#'
+    for j in range(0, 3):
+        colstr += (str(hex(i*2))[2:] + random.choice(nums))
     color(colstr)
     begin_fill()
     left(65-(i*5))
