@@ -44,5 +44,5 @@ for i in range(1, 8):
     goto(posi)
     end_fill()
 
-
+hideturtle()
 done()
