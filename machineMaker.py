@@ -27,11 +27,11 @@ msg = "clr = makeColor()\n"
 msg += "color(clr)\n"
 machineFile.write(msg)
 
-canvasText = "penup()\nbegin_fill()\ngoto(-300, 300)\nforward(600)\nseth(270)\nforward(600)\nseth(180)\nforward(600)\nseth(90)\nforward(600)\nend_fill()\n"
-machineFile.write(canvasText)
+msg = "penup()\nbegin_fill()\ngoto(-300, 300)\nforward(600)\nseth(270)\nforward(600)\nseth(180)\nforward(600)\nseth(90)\nforward(600)\nend_fill()\n"
+machineFile.write(msg)
 
-numShapes = random.randint(1, 10)
-machineFile.write("for i in range(0, " + str(numShapes) + "):\n")
+msg = "numShapes = random.randint(1, 10)\n"
+machineFile.write("for i in range(0, numshapes):\n")
 
 #this part makes the shapes
 #random color for the shape
