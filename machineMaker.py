@@ -21,8 +21,16 @@ else:
 machineFile.write("from turtle import *\n")
 machineFile.write("import random\n\n")
 
-clr = makeColor()
-machineFile.write("color('" + clr + "')\n")
+msg = "def makeColor():\n"
+msg += "\tr = lambda: random.randint(0,255)\n"
+msg += "\treturn('#%02X%02X%02X' % (r(),r(),r()))\n"
+
+machineFile.write(msg)
+
+
+msg = "clr = makeColor()\n"
+msg += "color(clr)\n"
+machineFile.write(msg)
 
 canvasText = "penup()\nbegin_fill()\ngoto(-300, 300)\nforward(600)\nseth(270)\nforward(600)\nseth(180)\nforward(600)\nseth(90)\nforward(600)\nend_fill()\n"
 machineFile.write(canvasText)
@@ -30,10 +38,11 @@ machineFile.write(canvasText)
 numShapes = random.randint(1, 10)
 machineFile.write("for i in range(0, " + str(numShapes) + "):\n")
 
-#this poart makes the shapes
+#this part makes the shapes
 #random color for the shape
-clr = makeColor()
-machineFile.write("\tcolor('" + clr + "')\n")
+msg = "\tclr = makeColor()\n"
+msg += "\tcolor(clr)\n"
+machineFile.write(msg)
 
 #go to the first point of the shape
 machineFile.write("\tpenup()\n")
