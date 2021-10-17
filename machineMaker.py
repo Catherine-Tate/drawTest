@@ -31,7 +31,8 @@ msg = "penup()\nbegin_fill()\ngoto(-300, 300)\nforward(600)\nseth(270)\nforward(
 machineFile.write(msg)
 
 msg = "numShapes = random.randint(1, 10)\n"
-machineFile.write("for i in range(0, numshapes):\n")
+msg += "for i in range(0, numShapes):\n"
+machineFile.write(msg)
 
 #this part makes the shapes
 #random color for the shape
