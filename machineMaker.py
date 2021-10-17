@@ -2,11 +2,6 @@
 import random
 import os.path
 
-def makeColor():
-	r = lambda: random.randint(0,255)
-	return("#%02X%02X%02X" % (r(),r(),r()))
-
-
 #maybe have it check for machines already in the folder?
 fileName = "machine.py"
 
